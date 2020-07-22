@@ -1,9 +1,11 @@
 #include <iostream>
 using namespace std;
 
-const int myNum = 15; //myNum can't be overriden
+int x;
 
 int main() {
-	cout << myNum;
+	cout << "Type a number: ";
+	cin >> x;
+	cout << "Your number is: " << x;
 	return 0;
 }
