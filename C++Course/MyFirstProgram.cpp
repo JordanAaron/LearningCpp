@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-int x;
+float f1 = 35e3;
+double d1 = 12E4;
 
 int main() {
-	cout << "Type a number: ";
-	cin >> x;
-	cout << "Your number is: " << x;
+	cout << f1 << endl;
+	cout << d1;
 	return 0;
 }
