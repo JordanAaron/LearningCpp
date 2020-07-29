@@ -2,21 +2,35 @@
 
 using namespace std;
 
-//A pointer is a variable that stores a memory address
+void swapNums(int& x, int& y) {
+	int z = x;
+	x = y;
+	y = z;
+}
 
-string food = "Pizza";
-string* ptr = &food;
-
-//The type of the pointer has to match the type of the variable you're working with 
-
+void breadToToast(string& food) {
+	food = "toasted bread";
+}
 
 int main() {
-	
-	cout << food << endl;
-	cout << ptr << endl;
+	int firstNum = 10;
+	int secondNum = 20;
 
-	//Deference: points to the value being held at the memory address the pointer is pointing to
-	cout << *ptr << endl;
+	cout << "Before swap: " << "\n";
+	cout << firstNum << secondNum << "\n";
+
+	// Call the function, which will change the values of firstNum and secondNum
+	swapNums(firstNum, secondNum);
+
+	cout << "After swap: " << "\n";
+	cout << firstNum << secondNum << "\n";
+
+
+	string bread = "bread";
+	cout << bread << endl;
+
+	breadToToast(bread);
+	cout << bread << endl;
 
 	return 0;
 }
