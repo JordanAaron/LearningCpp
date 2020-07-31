@@ -1,36 +1,32 @@
 #include <iostream>
-
 using namespace std;
 
-void swapNums(int& x, int& y) {
-	int z = x;
-	x = y;
-	y = z;
-}
+class MyClass {
+	public:
+		int myNum;
+		string myString;
 
-void breadToToast(string& food) {
-	food = "toasted bread";
+		void myMethod() {
+			cout << "Hello World! \n";
+		}
+
+		void declaredOutside();
+};
+
+void MyClass::declaredOutside() {
+	cout << "World Hello! \n";
 }
 
 int main() {
-	int firstNum = 10;
-	int secondNum = 20;
+	MyClass myObj;
 
-	cout << "Before swap: " << "\n";
-	cout << firstNum << secondNum << "\n";
+	myObj.myNum = 15;
+	myObj.myString = "Some text";
 
-	// Call the function, which will change the values of firstNum and secondNum
-	swapNums(firstNum, secondNum);
+	cout << myObj.myNum << " " << myObj.myString << endl;
 
-	cout << "After swap: " << "\n";
-	cout << firstNum << secondNum << "\n";
-
-
-	string bread = "bread";
-	cout << bread << endl;
-
-	breadToToast(bread);
-	cout << bread << endl;
+	myObj.myMethod();
+	myObj.declaredOutside();
 
 	return 0;
 }
