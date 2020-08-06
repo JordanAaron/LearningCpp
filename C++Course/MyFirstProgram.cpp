@@ -2,31 +2,25 @@
 using namespace std;
 
 class MyClass {
+	private:
+		string name;
+
 	public:
-		int myNum;
-		string myString;
-
-		void myMethod() {
-			cout << "Hello World! \n";
+		void setName(string s) {
+			name = s;
 		}
-
-		void declaredOutside();
+		
+		string getName() {
+			return name;
+		}
 };
 
-void MyClass::declaredOutside() {
-	cout << "World Hello! \n";
-}
-
 int main() {
-	MyClass myObj;
+	MyClass myClass;
 
-	myObj.myNum = 15;
-	myObj.myString = "Some text";
+	myClass.setName("Nadroj");
 
-	cout << myObj.myNum << " " << myObj.myString << endl;
-
-	myObj.myMethod();
-	myObj.declaredOutside();
+	cout << myClass.getName() << endl;
 
 	return 0;
 }
